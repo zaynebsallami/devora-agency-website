@@ -55,7 +55,7 @@ This project is dual-licensed:
 ## 🔒 For Commercial Use
 If you wish to use this code commercially, please contact:
 - **Email**: zaynebsallamii@gmail.com
-- **GitHub**: [@your-username](https://github.com/zaynebsallami)
+- **GitHub**: https://github.com/zaynebsallami
 
 ## 🚫 Copyright Infringement
 Unauthorized commercial use constitutes copyright infringement and will be
