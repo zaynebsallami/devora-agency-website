@@ -1,0 +1,33 @@
+cat > NOTICE << 'EOF'
+===============================================================================
+                    IMPORTANT LEGAL NOTICE
+===============================================================================
+
+This software repository contains proprietary code developed by Zayneb Sallami.
+
+While this project is licensed under the MIT License, the following additional
+restrictions and clarifications apply:
+
+1. **PORTFOLIO PURPOSE**: This code is primarily for portfolio demonstration
+   and educational purposes.
+
+2. **COMMERCIAL USE RESTRICTION**: Commercial use, redistribution, or
+   incorporation into commercial products requires explicit written permission
+   from the copyright holder (Zayneb Sallami).
+
+3. **ATTRIBUTION REQUIREMENT**: Any use must include:
+   - Clear attribution to Zayneb Sallami
+   - Link to original repository
+   - Reference to this NOTICE file
+
+4. **NO WARRANTY**: As per MIT License, this software is provided "as is"
+   without warranty of any kind.
+
+5. **CONTACT**: For commercial licensing or usage permissions:
+   Email: [your-email@example.com]
+   GitHub: https://github.com/[your-username]
+
+===============================================================================
+Copyright (c) 2025 Zayneb Sallami. All Rights Reserved.
+===============================================================================
+EOF
