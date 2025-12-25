@@ -1,4 +1,4 @@
-# Devora – Digital Agency (Demo)
+# Devora – Digital Agency
 
 Devora is a fictional digital agency created for portfolio and educational purposes.
 This project demonstrates a full-stack MEAN application.
@@ -22,7 +22,6 @@ This repository does not contain any proprietary or confidential material.
 
 ## 📌 Author
 Zayneb Sallami
-# [Project Name]
 
 > **⚠️ IMPORTANT: This is a PORTFOLIO PROJECT**
 > 
