@@ -1,3 +1,7 @@
+![Non-Commercial](https://img.shields.io/badge/License-Non--Commercial-red)
+![Portfolio Only](https://img.shields.io/badge/Use-Portfolio%20Only-blue)
+![Educational](https://img.shields.io/badge/Purpose-Educational-green)
+![No Commercial](https://img.shields.io/badge/Commercial-Not%20Allowed-orange)
 # Devora – Digital Agency
 
 Devora is a fictional digital agency created for portfolio and educational purposes.
