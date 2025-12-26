@@ -1,0 +1,83 @@
+<header class="header-container" role="banner">
+  <div class="container header-inner">
+    <div class="logo">
+      <img [src]="logoSrc" alt="NMC Logo" width="150" />
+    </div>
+
+    <select aria-label="Language Switch" (change)="switchLang($event)" [value]="currentLang">
+      <option value="de">Deutsch</option>
+      <option value="en">English</option>
+    </select>
+
+    <div class="controls">
+      <button class="theme-toggle" (click)="switchTheme()" aria-label="Toggle Theme" [attr.aria-pressed]="isDarkTheme">
+        {{ isDarkTheme ? '🌙' : '☀️' }}
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="contact-container">
+  <div class="contact-header">
+    <a routerLink="/" class="back-home">{{ t.backHome }}</a>
+  </div>
+
+  <div class="contact-content">
+    <div class="contact-form">
+      <h2>{{ t.formTitle }}</h2>
+      <form (ngSubmit)="onSubmit(); $event.preventDefault()" #contactForm="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
+        <!-- Name -->
+        <label>{{ t.name }}</label>
+        <input type="text" [(ngModel)]="contactData.name" name="name" required [ngModelOptions]="{standalone: true}" />
+        <div class="field-error" *ngIf="contactErrors.name">{{ contactErrors.name }}</div>
+
+        <!-- Company -->
+        <label>{{ t.company }}</label>
+        <input type="text" [(ngModel)]="contactData.company" name="company" />
+
+        <!-- Email -->
+        <label>{{ t.email }}</label>
+        <input type="email" [(ngModel)]="contactData.email" name="email" required [ngModelOptions]="{standalone: true}" />
+        <div class="field-error" *ngIf="contactErrors.email">{{ contactErrors.email }}</div>
+
+        <!-- Phone -->
+        <label>{{ t.phone }}</label>
+        <input type="tel" [(ngModel)]="contactData.phone" name="phone" />
+
+        <!-- Project Type -->
+        <label>{{ t.projectType }}</label>
+        <select [(ngModel)]="contactData.projectType" name="projectType" required [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let type of projectTypes[currentLang]" [value]="type">{{ type }}</option>
+        </select>
+        <div class="field-error" *ngIf="contactErrors.projectType">{{ contactErrors.projectType }}</div>
+
+        <!-- Message -->
+        <label>{{ t.message }}</label>
+        <textarea [(ngModel)]="contactData.message" name="message" rows="6" required></textarea>
+        <div class="field-error" *ngIf="contactErrors.message">{{ contactErrors.message }}</div>
+
+        <!-- Privacy -->
+        <div class="privacy">
+          <input type="checkbox" [(ngModel)]="contactData.privacyAccepted" name="privacyAccepted" />
+          <span>{{ t.privacy }}</span>
+        </div>
+        <div class="field-error" *ngIf="contactErrors.privacyAccepted">{{ contactErrors.privacyAccepted }}</div>
+
+        <!-- Submit -->
+       <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+  {{ isLoading ? t.sending : t.send }}
+</button>
+
+
+      </form>
+
+      <!-- Success / Error Messages -->
+      <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+      <div *ngIf="errorMessage" [innerHTML]="errorMessage"></div>
+    </div>
+
+    <div class="contact-image">
+      <img src="../../../assets/e.png" alt="Contact Us" />
+    </div>
+  </div>
+</div>

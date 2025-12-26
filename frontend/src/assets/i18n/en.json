@@ -1,0 +1,128 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Projects",
+    "about": "About Us"
+  },
+  "heroTitle": "Digital Solutions for Your Business",
+  "heroSubtitle": "Custom software development tailored to your specific business requirements",
+  "primaryCTA": "Schedule a Consultation",
+  "teamMemberName": "Our Team",
+  "teamMemberTitle": "Digital Solutions",
+  "videoTitle": "Our Approach",
+  "videoSubtitle": "Learn more about our working methods",
+  "ourPathTitle": "Our Process",
+  "ourPathSubtitle": "From analysis to implementation - clear processes for your project",
+  "serviceAnalysisTitle": "Analysis & Consulting",
+  "serviceAnalysisText": "Together we analyze your requirements and develop a suitable strategy",
+  "serviceDevelopmentTitle": "Development & Implementation",
+  "serviceDevelopmentText": "Implementation of your solution with modern technologies and proven methods",
+  "serviceSupportTitle": "Support & Maintenance",
+  "serviceSupportText": "Continuous support and maintenance for your digital solution",
+  "serviceCTA": "Discuss Project",
+  "digitalTitle": "Custom Software Development",
+  "digitalCustomSoftwareTitle": "Tailored Solutions",
+  "digitalCustomSoftwareText": "We develop software precisely tailored to your business processes",
+  "digitalAppDevTitle": "App Development",
+  "digitalAppDevText": "Mobile and web applications for your customers or internal processes",
+  "digitalProcessOptTitle": "Process Optimization",
+  "digitalProcessOptText": "Digital tools to increase efficiency in your workflows",
+  "digitalMVPTitle": "Agile Development",
+  "digitalMVPText": "Rapid implementation of initial solutions for timely results",
+  "digitalCTA": "Request Quote",
+  "portfolioTitle": "References",
+  "portfolioIntro": "Insights into various project categories",
+  "portfolio": {
+    "project1": "Sample Project 1",
+    "project2": "Sample Project 2",
+    "project3": "Sample Project 3",
+    "project4": "Sample Project 4",
+    "category": {
+      "web": "Web Development",
+      "design": "Design",
+      "ecommerce": "E-Commerce",
+      "webapp": "Web Application"
+    }
+  },
+  "testimonialsTitle": "Client Testimonials",
+  "testimonials": {
+    "q1": "Professional collaboration and good results",
+    "r1": "Managing Director",
+    "q2": "Satisfied with the implementation of our requirements",
+    "r2": "Project Manager",
+    "q3": "Competent consulting and solid implementation",
+    "r3": "IT Manager"
+  },
+  "cta": {
+    "title": "Start Your Next Project",
+    "subtitle": "Contact us for a non-binding conversation",
+    "button": "Contact Us"
+  },
+  "contactFormTitle": "Contact Us",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone",
+  "company": "Company",
+  "projectType": "Project Type",
+  "projectTypes": {
+    "website": "Website",
+    "webapp": "Web Application",
+    "mobile": "Mobile App",
+    "ecommerce": "E-Commerce",
+    "software": "Business Software",
+    "consulting": "Consulting",
+    "other": "Other"
+  },
+  "budget": "Budget Range",
+  "budgetRanges": {
+    "small": "Small Budget",
+    "medium": "Medium Budget",
+    "large": "Large Budget",
+    "enterprise": "Enterprise Budget",
+    "open": "Not specified"
+  },
+  "message": "Message",
+  "send": "Send",
+  "sending": "Sending...",
+  "formFillRequired": "Please fill in all required fields",
+  "formSuccess": "Thank you! We will contact you",
+  "formError": "Error sending. Please try again",
+  "footer": {
+    "rights": "All rights reserved",
+    "contact": "Contact",
+    "impressum": "Legal Notice",
+    "datenschutz": "Privacy Policy"
+  },
+  "cookie": {
+    "title": "Cookie Settings",
+    "message": "We use cookies for website functionality",
+    "acceptAll": "Accept All",
+    "essentialOnly": "Essential Only",
+    "preferences": "Settings",
+    "settingsTitle": "Cookie Settings",
+    "essentialTitle": "Essential Cookies",
+    "essentialDesc": "For basic website functions",
+    "analyticsTitle": "Analytics Cookies",
+    "analyticsDesc": "For website improvements",
+    "savePrefs": "Save",
+    "revokeConsent": "Reset",
+    "settingsBtn": "Cookie Settings"
+  },
+  "stats": {
+    "projectsCompleted": "Projects",
+    "happyClients": "Satisfied Clients",
+    "yearsExperience": "Years Experience",
+    "averageIncrease": "Client Satisfaction"
+  },
+  "statsValues": {
+    "projectsCompleted": "Multiple",
+    "happyClients": "High",
+    "yearsExperience": "+",
+    "averageIncrease": "+"
+  },
+  "faqTitle": "Frequently Asked Questions",
+  "faqSubtitle": "Answers to common topics",
+  "faqOpenQuestion": "Questions?",
+  "faqCTA": "Contact"
+}

@@ -1,0 +1,49 @@
+<header class="header-container" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+       <img [src]="logoSrc" alt="NMC Logo" width="150" />
+
+      </div>
+      <div class="controls">
+        <button class="theme-toggle" (click)="switchTheme()" aria-label="Toggle Theme" [attr.aria-pressed]="isDarkTheme">
+          {{ isDarkTheme ? '🌙' : '☀️' }}
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="contact-container">
+  <div class="contact-header">
+    <a routerLink="/" class="back-home">{{ t.backHome }}</a>
+  </div>
+<section class="legal-page">
+  <h1>{{ current.title }}</h1>
+  <p>{{ current.legal }}</p>
+  <p>{{ current.company }}</p>
+
+  <h3>Managing Directors</h3>
+  <ul>
+    <li *ngFor="let m of current.managing">{{ m }}</li>
+  </ul>
+
+  <p>{{ current.contact }}</p>
+  <p>{{ current.register }}</p>
+  <p>{{ current.ustid }}</p>
+  <p>{{ current.wirtschaftsid }}</p>
+  <p>{{ current.responsible }}</p>
+
+  <h3>{{ current.disclaimerTitle }}</h3>
+  <ul>
+    <li *ngFor="let l of current.liability">{{ l }}</li>
+  </ul>
+
+<p>
+  {{ current.privacyNote.split('Datenschutzerklärung')[0] }}
+  <a [routerLink]="['/datenschutz']">
+    {{ currentLang === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy' }}
+  </a>.
+</p>  <p>{{ current.cookies }}</p>
+
+  <!-- Language Switch -->
+  <button (click)="switchLang('de')">DE</button>
+  <button (click)="switchLang('en')">EN</button>
+</section>

@@ -1,0 +1,69 @@
+<div *ngIf="isVisible" class="cookie-overlay">
+  <div class="cookie-popup" [class.settings-mode]="settingsOpen">
+
+    <!-- Main Banner -->
+    <div *ngIf="!settingsOpen">
+      <div class="cookie-header">
+        <div class="cookie-icon">🍪</div>
+        <h3>{{ cookieTranslations[currentLang].title }}</h3>
+
+        <!-- Language Switch -->
+        <select class="cookie-lang-select" [(ngModel)]="currentLang" aria-label="Language">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <p>{{ cookieTranslations[currentLang].message }}</p>
+      <div class="cookie-buttons">
+        <button class="btn accept" (click)="acceptAll()">{{ cookieTranslations[currentLang].acceptAll }}</button>
+        <button class="btn decline" (click)="acceptEssential()">{{ cookieTranslations[currentLang].essentialOnly }}</button>
+        <button class="btn settings" (click)="openSettings()">{{ cookieTranslations[currentLang].preferences }}</button>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div *ngIf="settingsOpen">
+      <div class="cookie-header">
+        <h3>{{ cookieTranslations[currentLang].settingsTitle }}</h3>
+
+        <!-- Language Switch -->
+        <select class="cookie-lang-select" [(ngModel)]="currentLang" aria-label="Language">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
+      <div class="cookie-types">
+        <div class="cookie-type">
+          <h4>{{ cookieTranslations[currentLang].essentialTitle }}</h4>
+          <p>{{ cookieTranslations[currentLang].essentialDesc }}</p>
+          <label class="toggle">
+            <input type="checkbox" checked disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="cookie-type">
+          <h4>{{ cookieTranslations[currentLang].analyticsTitle }}</h4>
+          <p>{{ cookieTranslations[currentLang].analyticsDesc }}</p>
+          <label class="toggle">
+            <input type="checkbox" [(ngModel)]="analyticsChecked">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="cookie-buttons">
+        <button class="btn save" (click)="savePreferences()">{{ cookieTranslations[currentLang].savePrefs }}</button>
+        <button class="btn revoke" (click)="revokeConsent()">{{ cookieTranslations[currentLang].revokeConsent }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating settings button -->
+<div class="cookie-settings-btn">
+  <button (click)="openSettings()">
+    <span>{{ cookieTranslations[currentLang].settingsBtn }}</span> 🍪
+  </button>
+</div>

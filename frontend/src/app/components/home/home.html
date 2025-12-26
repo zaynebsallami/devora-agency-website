@@ -1,0 +1,255 @@
+<app-cookie-banner></app-cookie-banner>
+
+<!-- Added loading check to prevent showing literal translation keys -->
+<div *ngIf="!translationsLoaded" class="loading-container">
+  <div class="loading-spinner">Loading...</div>
+</div>
+
+<div *ngIf="translationsLoaded">
+  <header class="header-container" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <img [src]="logoSrc" alt="Devora Logo" width="150" />
+      </div>
+<button class="mobile-menu-toggle" (click)="toggleMobileMenu()">☰</button>
+
+      <nav class="nav-items" [class.mobile-open]="isMobileMenuOpen" role="navigation" aria-label="Primary navigation">
+        <a href="#home" (click)="navigateToSection('home'); onNavClick()">{{ 'navigation.home' | translate }}</a>
+        <a href="#services" (click)="navigateToSection('services'); onNavClick()">{{ 'navigation.services' | translate }}</a>
+        <a href="#portfolio" (click)="navigateToSection('portfolio'); onNavClick()">{{ 'navigation.portfolio' | translate }}</a>
+        <a href="#about" (click)="navigateToSection('about'); onNavClick()">{{ 'navigation.about' | translate }}</a>
+      </nav>
+
+      <div class="controls">
+        <button class="theme-toggle" (click)="switchTheme()" aria-label="Toggle Theme" [attr.aria-pressed]="isDarkTheme">
+          {{ isDarkTheme ? '🌙' : '☀️' }}
+        </button>
+
+        <select aria-label="Language Switch" (change)="switchLang($event)" [value]="currentLang">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+        </select>
+
+        <button class="cta-button"  [routerLink]="['/contact']">{{ 'primaryCTA' | translate }}</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: customer-first -->
+    <section id="home" class="hero-section animate-fade-in">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>{{ 'heroTitle' | translate }}</h1>
+          <p class="hero-sub">{{ 'heroSubtitle' | translate }}</p>
+          <div class="hero-cta-row">
+            <button class="primary-cta"  [routerLink]="['/contact']">{{ 'primaryCTA' | translate }}</button>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img
+            [src]="'assets/t.png'" alt="Team" class="team-photo" />
+          <div class="person-card">
+            <p class="name">{{ 'Devora' | translate }}</p>
+            <p class="title">{{ 'teamMemberTitle' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <!-- SERVICES -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2>{{ 'ourPathTitle' | translate }}</h2>
+          <p class="section-sub">{{ 'ourPathSubtitle' | translate }}</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card" *ngFor="let s of services">
+            <div class="service-icon">{{ s.icon }}</div>
+            <h3>{{ s.title | translate }}</h3>
+            <p>{{ s.text | translate }}</p>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <button class="primary-cta"  [routerLink]="['/contact']">
+            {{ 'serviceCTA' | translate }}
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- DIGITALIZATION SECTION -->
+    <section class="digitalization-section">
+      <div class="container">
+        <!-- Add this new header container above the grid -->
+        <div class="section-header">
+          <h2>{{ 'digitalTitle' | translate }}</h2>
+        </div>
+        
+        <div class="digitalization-grid">
+          <!-- Text Column -->
+          <div class="digital-text">
+            
+            <div class="digital-item">
+              <h3>{{ 'digitalCustomSoftwareTitle' | translate }}</h3>
+              <p>{{ 'digitalCustomSoftwareText' | translate }}</p>
+            </div>
+
+            <div class="digital-item">
+              <h3>{{ 'digitalAppDevTitle' | translate }}</h3>
+              <p>{{ 'digitalAppDevText' | translate }}</p>
+            </div>
+
+            <div class="digital-item">
+              <h3>{{ 'digitalProcessOptTitle' | translate }}</h3>
+              <p>{{ 'digitalProcessOptText' | translate }}</p>
+            </div>
+
+            <div class="digital-item">
+              <h3>{{ 'digitalMVPTitle' | translate }}</h3>
+              <p>{{ 'digitalMVPText' | translate }}</p>
+            </div>
+
+            <!-- Button outside cards -->
+            <div class="digital-cta">
+              <button class="primary-cta"  [routerLink]="['/contact']">{{ 'digitalCTA' | translate }}</button>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div class="digital-image">
+            <img src="../assets/code.png" alt="PC screen with simple interface, employee sitting in front">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section section-pad">
+      <div class="cta-bg-shapes">
+        <span class="shape shape-circle"></span>
+        <span class="shape shape-line"></span>
+        <span class="shape shape-polygon"></span>
+      </div>
+      <h2 class="cta-title">{{ 'cta.title' | translate }}</h2>
+      <p class="cta-subtitle">{{ 'cta.subtitle' | translate }}</p>
+      <button class="cta-button"  [routerLink]="['/contact']">
+        {{ 'cta.button' | translate }}
+      </button>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio-section section-pad animate-fade-in">
+      <div class="container">
+        <h2>{{ 'portfolioTitle' | translate }}</h2>
+        <p class="section-sub">{{ 'portfolioIntro' | translate }}</p>
+
+        <div class="portfolio-grid">
+          <figure class="portfolio-item" *ngFor="let p of portfolio">
+            <img [src]="p.img" [alt]="p.title" (click)="openLightbox(p.img, p.title)" loading="lazy" />
+            <figcaption>
+              <h4>{{ p.title | translate }}</h4>
+              <p>{{ p.category | translate }}</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+      <div class="lightbox-inner" (click)="$event.stopPropagation()">
+        <button class="lb-close" (click)="closeLightbox()" aria-label="Close">&times;</button>
+        <button class="lb-prev" (click)="prevLightbox()" aria-label="Previous">&#10094;</button>
+        <img [src]="lightboxImage" alt="Project" />
+        <button class="lb-next" (click)="nextLightbox()" aria-label="Next">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section-pad animate-fade-in">
+      <div class="container">
+        <h2>{{ 'testimonialsTitle' | translate }}</h2>
+        <div class="testi-wrap">
+          <button class="testi-prev" (click)="prevTestimonial()" aria-label="Previous testimonial">&#10094;</button>
+          <div class="testi-slide">
+            <article class="testimonial-card" *ngFor="let t of testimonials; let i = index" [class.active]="i === activeTestimonial">
+              <p class="quote">“{{ t.quote | translate }}”</p>
+              <p class="author">— {{ t.name }} · <span class="role">{{ t.role | translate }}</span></p>
+            </article>
+          </div>
+          <button class="testi-next" (click)="nextTestimonial()" aria-label="Next testimonial">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+
+
+<section id="faq" class="faq section-pad">
+  <h2>{{ faqTranslations[currentLang].faqTitle }}</h2>
+  <p>{{ faqTranslations[currentLang].faqSubtitle }}</p>
+
+  <div id="faq-list">
+    <div class="faq-item" *ngFor="let item of faqItems" [class.active]="item.open">
+      <h3 class="faq-question" (click)="item.open = !item.open">
+        {{ item.question }}
+        <span class="faq-icon">{{ item.open ? '-' : '+' }}</span>
+      </h3>
+      <p class="faq-answer" *ngIf="item.open">{{ item.answer }}</p>
+    </div>
+  </div>
+<div>
+  <!-- "Noch Fragen offen?" -->
+  <p class="faq-open-question">{{ faqTranslations[currentLang].faqOpenQuestion }}</p>
+
+  <button class="primary-cta"  [routerLink]="['/contact']">
+    {{ faqTranslations[currentLang].faqCTA }}
+  </button></div>
+</section>
+
+
+
+    <!-- ABOUT SECTION -->
+   <section id="about" class="about section-pad animate-fade-in">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <h2>{{ aboutTranslations[currentLang].aboutTitle }}</h2>
+      <p class="about-lead">{{ aboutTranslations[currentLang].aboutLead }}</p>
+      <div class="about-cta">
+        <button class="primary-cta"  [routerLink]="['/contact']">
+          {{ aboutTranslations[currentLang].contactButton }}
+        </button>
+      </div>
+      <p class="about-sub">{{ aboutTranslations[currentLang].aboutSub }}</p>
+    </div>
+
+    <div class="about-media">
+      <img
+        [src]="isDarkTheme ? 'assets/dark-icon.png' : 'assets/light-icon.png'"
+        alt="Team" />
+    </div>
+  </div>
+</section>
+
+
+    <div *ngIf="successMessage" class="success-popup">
+      {{ successMessage }}
+    </div>
+  </main>
+
+ <footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; 2025 Devora - {{ footer.rights }}</p>
+    <p>{{ footer.contact }}</p>
+
+    <nav class="footer-nav">
+      <a [routerLink]="['/impressum']">{{ footer.impressum }}</a>
+      <a [routerLink]="['/datenschutz']">{{ footer.datenschutz }}</a>
+
+    </nav>
+  </div>
+</footer>
+
+
+</div>

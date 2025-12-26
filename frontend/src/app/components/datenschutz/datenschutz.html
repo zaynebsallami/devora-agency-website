@@ -1,0 +1,30 @@
+<header class="header-container" role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+      <img [src]="logoSrc" alt="NMC Logo" width="150" />
+      </div>
+      <div class="controls">
+        <button class="theme-toggle" (click)="switchTheme()" aria-label="Toggle Theme" [attr.aria-pressed]="isDarkTheme">
+          {{ isDarkTheme ? '🌙' : '☀️' }}
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="contact-container">
+  <div class="contact-header">
+    <a routerLink="/" class="back-home">{{ t.backHome }}</a>
+  </div>
+<section class="privacy-page">
+    <h1>{{ current.title }}</h1>
+
+  <div *ngFor="let section of current.sections" class="privacy-section">
+    <h3>{{ section.heading }}</h3>
+    <p *ngFor="let line of section.content">{{ line }}</p>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <button (click)="switchLang('de')" [disabled]="currentLang==='de'">DE</button>
+    <button (click)="switchLang('en')" [disabled]="currentLang==='en'">EN</button>
+  </div>
+</section>

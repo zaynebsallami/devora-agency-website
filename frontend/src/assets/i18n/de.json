@@ -1,0 +1,128 @@
+{
+  "navigation": {
+    "home": "Start",
+    "services": "Leistungen",
+    "portfolio": "Projekte",
+    "about": "Über uns"
+  },
+  "heroTitle": "Digitale Lösungen für Ihr Unternehmen",
+  "heroSubtitle": "Individuelle Software-Entwicklung, die auf Ihre spezifischen Geschäftsanforderungen zugeschnitten ist",
+  "primaryCTA": "Beratungsgespräch vereinbaren",
+  "teamMemberName": "Unser Team",
+  "teamMemberTitle": "Digital Solutions",
+  "videoTitle": "Unser Ansatz",
+  "videoSubtitle": "Erfahren Sie mehr über unsere Arbeitsweise",
+  "ourPathTitle": "Unser Vorgehen",
+  "ourPathSubtitle": "Von der Analyse bis zur Umsetzung - klare Prozesse für Ihr Projekt",
+  "serviceAnalysisTitle": "Analyse & Beratung",
+  "serviceAnalysisText": "Gemeinsam analysieren wir Ihre Anforderungen und entwickeln eine passende Strategie",
+  "serviceDevelopmentTitle": "Entwicklung & Umsetzung",
+  "serviceDevelopmentText": "Umsetzung Ihrer Lösung mit modernen Technologien und bewährten Methoden",
+  "serviceSupportTitle": "Betreuung & Support",
+  "serviceSupportText": "Kontinuierliche Begleitung und Support für Ihre digitale Lösung",
+  "serviceCTA": "Projekt besprechen",
+  "digitalTitle": "Individuelle Software-Entwicklung",
+  "digitalCustomSoftwareTitle": "Maßgeschneiderte Lösungen",
+  "digitalCustomSoftwareText": "Wir entwickeln Software, die exakt auf Ihre Geschäftsprozesse zugeschnitten ist",
+  "digitalAppDevTitle": "App-Entwicklung",
+  "digitalAppDevText": "Mobile und Web-Anwendungen für Ihre Kunden oder interne Prozesse",
+  "digitalProcessOptTitle": "Prozessoptimierung",
+  "digitalProcessOptText": "Digitale Tools zur Effizienzsteigerung Ihrer Arbeitsabläufe",
+  "digitalMVPTitle": "Agile Entwicklung",
+  "digitalMVPText": "Schnelle Umsetzung erster Lösungen für zeitnahe Ergebnisse",
+  "digitalCTA": "Angebot anfordern",
+  "portfolioTitle": "Referenzen",
+  "portfolioIntro": "Einblicke in verschiedene Projektkategorien",
+  "portfolio": {
+    "project1": "Beispielprojekt 1",
+    "project2": "Beispielprojekt 2",
+    "project3": "Beispielprojekt 3",
+    "project4": "Beispielprojekt 4",
+    "category": {
+      "web": "Webentwicklung",
+      "design": "Design",
+      "ecommerce": "E-Commerce",
+      "webapp": "Web-Anwendung"
+    }
+  },
+  "testimonialsTitle": "Kundenstimmen",
+  "testimonials": {
+    "q1": "Professionelle Zusammenarbeit und gute Ergebnisse",
+    "r1": "Geschäftsführer",
+    "q2": "Zufrieden mit der Umsetzung unserer Anforderungen",
+    "r2": "Projektleiterin",
+    "q3": "Kompetente Beratung und solide Umsetzung",
+    "r3": "IT-Verantwortlicher"
+  },
+  "cta": {
+    "title": "Starte Ihr nächstes Projekt",
+    "subtitle": "Kontaktieren Sie uns für ein unverbindliches Gespräch",
+    "button": "Kontakt aufnehmen"
+  },
+  "contactFormTitle": "Kontaktieren Sie uns",
+  "name": "Name",
+  "email": "E-Mail",
+  "phone": "Telefon",
+  "company": "Unternehmen",
+  "projectType": "Projekttyp",
+  "projectTypes": {
+    "website": "Website",
+    "webapp": "Web-Anwendung",
+    "mobile": "Mobile App",
+    "ecommerce": "E-Commerce",
+    "software": "Business Software",
+    "consulting": "Beratung",
+    "other": "Sonstiges"
+  },
+  "budget": "Budgetrahmen",
+  "budgetRanges": {
+    "small": "Kleines Budget",
+    "medium": "Mittleres Budget",
+    "large": "Großes Budget",
+    "enterprise": "Unternehmensbudget",
+    "open": "Noch offen"
+  },
+  "message": "Nachricht",
+  "send": "Senden",
+  "sending": "Wird gesendet...",
+  "formFillRequired": "Bitte füllen Sie alle Pflichtfelder aus",
+  "formSuccess": "Vielen Dank! Wir melden uns bei Ihnen",
+  "formError": "Fehler beim Senden. Bitte versuchen Sie es erneut",
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "contact": "Kontakt",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz"
+  },
+  "cookie": {
+    "title": "Cookie-Einstellungen",
+    "message": "Wir verwenden Cookies für die Funktionalität der Website",
+    "acceptAll": "Alle akzeptieren",
+    "essentialOnly": "Nur notwendige",
+    "preferences": "Einstellungen",
+    "settingsTitle": "Cookie-Einstellungen",
+    "essentialTitle": "Notwendige Cookies",
+    "essentialDesc": "Für grundlegende Website-Funktionen",
+    "analyticsTitle": "Analyse-Cookies",
+    "analyticsDesc": "Für Website-Verbesserungen",
+    "savePrefs": "Speichern",
+    "revokeConsent": "Zurücksetzen",
+    "settingsBtn": "Cookie-Einstellungen"
+  },
+  "stats": {
+    "projectsCompleted": "Projekte",
+    "happyClients": "Zufriedene Kunden",
+    "yearsExperience": "Jahre Erfahrung",
+    "averageIncrease": "Kundenzufriedenheit"
+  },
+  "statsValues": {
+    "projectsCompleted": "Mehrere",
+    "happyClients": "Hoch",
+    "yearsExperience": "+",
+    "averageIncrease": "+"
+  },
+  "faqTitle": "Häufige Fragen",
+  "faqSubtitle": "Antworten zu häufigen Themen",
+  "faqOpenQuestion": "Fragen?",
+  "faqCTA": "Kontaktieren"
+}
